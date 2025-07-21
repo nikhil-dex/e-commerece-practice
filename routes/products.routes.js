@@ -9,7 +9,7 @@ router.use(authMiddleware.isAuthenticated).use(authMiddleware.isSeller);
 
 router.get("/get-products", async (req, res, next) => {
   try {
-    const products = await productModel.find({ seller: req.user._id });
+    const products = await productModel.find({});
     res.status(200).json({
       message: "Products fetched successfully",
       products,

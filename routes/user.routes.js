@@ -13,7 +13,7 @@ router.get("/getProfile",authMiddleware.isAuthenticated,userController.getProfil
 router.get("/products",authMiddleware.isAuthenticated,userController.getProducts);
 router.get("/products/:id",authMiddleware.isAuthenticated,userController.getProducts);
 router.get("/order/:id",authMiddleware.isAuthenticated,userController.createOrder);
-router.get("/verify/:id",authMiddleware.isAuthenticated,userController.verifyPayment);
+router.post("/verify/:id",authMiddleware.isAuthenticated,userController.verifyPayment);
 
 
 

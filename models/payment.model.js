@@ -10,12 +10,12 @@ const paymentSchema = new Schema({
     paymentId: {
         type: String,
         ref: "payment",
-        required: true
+      
     },
     signature: {
         type:   String,
         ref: "user",
-        required: true
+    
     },
     amount: {
         type: Number,
